@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+
+    <nav>
+        <div class="container navigation">
+            <div class="logo">Blog</div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('post_create') }}">New Post</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('about') }}">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header_about">
+        <div class="container2">
+            <div class="content-center">
+                <h1>New Post</h1>
+            </div>
+        </div>
+    </header>
+
+
+<!-- новий код -->
+<section>
+    <div class="container">
+       
+        <form class="post_create" method="POST" enctype="multipart/form-data" action="{{ url_for('post_create') }}">
+            <label for="">Назва поста:</label> <br>
+            <input type="text" name="title" placeholder="Заголовок" required><br>
+            <label for="">Текст поста:</label> <br>
+            <textarea name="text" placeholder="Текст посту" required></textarea><br>
+            <label for="image">Зображення:</label>
+            <input type="file" id="image" name="image" accept="image/*"><br><br>
+            <button type="submit">Опублікувати</button>
+        </form>
+        
+    </div>
+</section>
+<!-- кінець нового коду -->
+
+<footer>
+    <div class="container">
+        <h2>My blog 2025</h2>
+    </div>
+    
+</footer>
+</body>
+</html>

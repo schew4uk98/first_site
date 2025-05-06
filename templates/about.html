@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+
+    <nav>
+        <div class="container navigation">
+            <div class="logo">Blog</div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('post_create') }}">New Post</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('about') }}">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header_about">
+        <div class="container2">
+            <div class="content-center">
+                <h1>About</h1>
+            </div>
+        </div>
+    </header>
+
+
+<!-- новий код -->
+<section>
+    <div class="container">
+       
+        <div class="about-container">
+            <img src="{{ url_for('static', filename='img/about.png') }}" alt="Фото автора" class="author-photo">
+            <h1>Привіт! Я — [Ім’я Автора]</h1>
+            <p class="bio">
+                Я створив цей блог у рамках шкільного проєкту, щоб ділитися власними думками, ідеями та новинами про те, що мене цікавить.
+                Мені подобається веброзробка, дизайн та писати на різні теми. Цей сайт — моя спроба поєднати все це в одному місці.
+            </p>
+            <p class="bio">
+                Тут ви знайдете статті, що стосуються технологій, навчання, творчості й не тільки. Сподіваюся, вам буде цікаво!
+            </p>
+            <div class="contact">
+                Зв’язатися зі мною: <a href="mailto:youremail@example.com">youremail@example.com</a>
+            </div>
+        </div>
+
+        
+    </div>
+</section>
+<!-- кінець нового коду -->
+
+<footer>
+    <div class="container">
+        <h2>My blog 2025</h2>
+    </div>
+    
+</footer>
+</body>
+</html>

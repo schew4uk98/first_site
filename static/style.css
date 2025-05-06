@@ -1,0 +1,251 @@
+* {
+    margin: 0; /* Скидає всі зовнішні відступи за 
+    замовчуванням для всіх елементів */
+    padding: 0; /* Скидає всі внутрішні відступи 
+    за замовчуванням */
+    box-sizing: border-box; /* Застосовує модель коробки,
+     яка включає padding і border в загальну ширину/висоту */
+}
+
+.container {
+    width: 1200px; /* Встановлює фіксовану ширину контейнера */
+    margin: 0 auto; /* Центрує контейнер горизонтально: 
+    зверху/знизу — 0, зліва/справа — автоматично */
+}
+
+.navigation {
+    display: flex; /* Встановлює flexbox-розташування 
+    для дочірніх елементів */
+    justify-content: space-between; /* Розміщує елементи по краях
+     контейнера з рівномірним простором між ними */
+}
+
+nav {
+    padding: 30px 0; /* Додає внутрішній відступ зверху і знизу
+     по 30px, зліва і справа — 0 */
+    background-color: aliceblue; /* Встановлює світло-блакитний 
+    колір фону */
+}
+
+.menu li a {
+    text-decoration: none; /* Прибирає підкреслення у посилань */
+    color: rgb(37, 37, 37); /* Встановлює темно-сірий колір 
+    тексту */
+    font-size: 16pt; /* Задає розмір шрифту 16 пунктів */
+}
+
+
+.menu li a:hover {
+    border-bottom: 3px solid rgb(108, 163, 92);
+    transition: ease-in .1s;
+}
+.menu ul {
+    display: flex; /* Розташовує всі <li> елементи в один рядок
+     за допомогою flexbox */
+}
+
+.menu li {
+    list-style: none; /* Вимикає маркери списку (крапки, риски тощо) для <li> елементів */
+    margin-left: 15px; /* Додає відступ зліва між елементами списку */
+}
+
+
+
+.logo {
+    font-size: 20pt; /* Встановлює розмір шрифту логотипу — 20 пунктів */
+}
+
+header {
+    height: 700px; /* Мінімальна висота блоку — 1000px */
+    background-image: url("img/image_header.jpg"); /* 
+    Встановлює зображення як фон */
+    background-repeat: no-repeat; /* Забороняє повторення фонового
+     зображення */
+    background-size: cover; /* Масштабує зображення, щоб повністю
+     покрити елемент */
+
+     display: flex;
+     justify-content: center; /* Вирівнює по горизонталі */
+     align-items: center; /* Вирівнює по вертикалі */
+     height: 100vh; /* Робить header на всю висоту екрану */
+     text-align: center; /* Центрує текст */
+}
+
+header h1 {
+    font-size: 62px; /* Встановлює великий розмір шрифту для заголовка */
+    color: white; /* Задає білий колір тексту */
+}
+.container2 {
+    display: flex; /* Встановлює flex-контейнер для розміщення 
+    дочірніх елементів */
+    justify-content: center; /* Горизонтально центрує елементи 
+    всередині контейнера */
+    align-items: center; /* Вертикально центрує елементи по висоті
+     контейнера */
+    width: 100%; /* Задає повну ширину блоку відносно батьківського
+     елемента */
+}
+
+
+/* section */
+
+.post-image img {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.post-info img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.post-info {
+    margin: 15px 0; /* Встановлює зовнішні відступи зверху і знизу по 15px */
+    width: 50%; /* Встановлює ширину елемента на 50% від батьківського контейнера */
+    display: flex; /* Використовує flexbox для розташування дочірніх елементів */
+    align-items: center; /* Вирівнює дочірні елементи по вертикалі по центру */
+}
+
+.post-info span {
+    margin-right: 20px; /* Додає відступ 20px праворуч для <span> усередині*/
+}
+
+.post-button {
+    display: inline-block; /* Робить елемент блочним, але дозволяє розташовувати
+     його в рядку */
+    text-decoration: none; /* Видаляє підкреслення для тексту в посиланнях */
+    color: rgb(37, 37, 37); /* Встановлює темно-сірий колір тексту */
+    border: 1px solid #ccc; /* Додає рамку товщиною 1px зі сірим кольором */
+    padding: 20px 25px; /* Внутрішні відступи: 20px зверху/знизу, 25px зліва/справа */
+    border-radius: 100px; /* Робить кнопці закруглені кути (фактично створює овальну форму) */
+    margin-top: 30px; /* Встановлює верхній відступ у 30px */
+    transition: ease-in .2s; /* Додає плавний ефект зміни стану за 0.2 секунди */
+} 
+
+.post-button:hover {
+    background-color: rgb(108, 163, 92); /* Змінює фон кнопки при наведенні на зелений відтінок */
+    transition: ease-out .2s; /* Додає плавний ефект зміни стану за 0.2 секунди */
+}
+
+.post {
+    box-sizing: border-box; /* Враховує padding і border у загальній ширині та висоті елемента */
+    margin: 50px 0; /* Встановлює зовнішні відступи: 50px зверху і знизу, 0 по боках */
+    border-bottom: 1px solid #ccc; /* Додає сіру лінію (1px) внизу елемента */
+    padding-bottom: 50px; /* Встановлює внутрішній відступ у 50px знизу */
+}
+
+
+/* footer */
+
+footer {
+    background-color: black;
+    padding: 25px 0;
+}
+footer h2 {
+    color: white;
+    text-align: center;
+}
+
+/* Different header */
+.header_single {
+height: 400px;
+background-image: url("img/single-post-bg.jpg"); 
+}
+
+.header_about {
+    height: 400px;
+    background-image: url("img/single-post-bg.jpg"); 
+}
+
+/* END Different header */
+
+/* Post create  form */
+
+input[type=text]{
+    height: 40px;
+    width: 100%;
+    background-color: #f8f8f8;
+    
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    margin: 10px 0;
+    padding: 12px 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    margin: 10px 0;
+  }
+
+  button[type=submit] {
+    display: inline-block; /* Робить елемент блочним, але дозволяє розташовувати
+     його в рядку */
+    text-decoration: none; /* Видаляє підкреслення для тексту в посиланнях */
+    color: rgb(37, 37, 37); /* Встановлює темно-сірий колір тексту */
+    border: 1px solid #ccc; /* Додає рамку товщиною 1px зі сірим кольором */
+    padding: 20px 25px; /* Внутрішні відступи: 20px зверху/знизу, 25px зліва/справа */
+    border-radius: 100px; /* Робить кнопці закруглені кути (фактично створює овальну форму) */
+    margin-top: 30px; /* Встановлює верхній відступ у 30px */
+    transition: ease-in .2s; /* Додає плавний ефект зміни стану за 0.2 секунди */
+}
+button[type=submit]:hover{
+    background-color: rgb(108, 163, 92); /* Змінює фон кнопки при наведенні на зелений відтінок */
+    transition: ease-out .2s; /* Додає плавний ефект зміни стану за 0.2 секунди */
+}
+
+.post_create {
+    padding: 30px 0;
+}
+
+
+/* END Post create  form */
+
+/* About */
+.about-container {
+    background-color: white;
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.author-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.bio {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.contact {
+    margin-top: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.contact a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+/* END About */

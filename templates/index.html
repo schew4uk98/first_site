@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+
+    <nav>
+        <div class="container navigation">
+            <div class="logo">Blog</div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('post_create') }}">New Post</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('about') }}">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container2">
+            <div class="content-center">
+                <h1>Hello! This is my blog.</h1>
+            </div>
+        </div>
+    </header>
+
+
+<!-- новий код -->
+<section>
+    <div class="container">
+        {% for post in posts %}
+        <div class="post">
+            <div class="post-image">
+                <img src="{{ url_for('static',filename='img/post-img1.jpg' ) }}" alt="">
+            </div>
+
+            <div class="post-content">
+                <h2>{{post.title}}</h2>
+                <div class="post-info">
+                    <img src="{{ url_for('static',filename='img/user.png' ) }}  " alt="user"> 
+                    <span>Admin</span>
+                    <span>{{post.date_created}}</span>
+                    <img src="{{ url_for('static',filename='img/comment.png' ) }}" alt="">
+                    <span>10 Comments</span>
+                </div>
+                <div class="post-text">
+                    {{post.content}}
+                </div>
+                <a href="{{url_for('post_single')}}" class="post-button">
+                    Continue Reading 
+                </a>
+
+            </div>
+        </div>
+        {% endfor%}
+
+        
+    </div>
+</section>
+<!-- кінець нового коду -->
+
+<footer>
+    <div class="container">
+        <h2>My blog 2025</h2>
+    </div>
+    
+</footer>
+</body>
+</html>
